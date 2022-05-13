@@ -67,17 +67,17 @@ not yet exist. Default: ./quorum-test-network
 ```
 
 This prompts you to pick a quorum variant, whether you would like to try Privacy and the location for the artifacts. By 
-default artifact files are stored at `./quorum-test-network`, change directory to the artifacts folder: 
+default artifact files are stored at `./metchain-quorum-network`, change directory to the artifacts folder: 
 
 ```
-$> cd quorum-test-network
+$> cd metachain-quorum-network
 ``` 
 
 
 Alternatively, you can use cli options and skip the prompt above like so:
 
 ```
-npx quorum-dev-quickstart --clientType besu --outputPath ./quorum-test-network --monitoring default --privacy true --orchestrate false --quorumKeyManager false
+npx metachain-quorum-quickstart --clientType besu --outputPath ./metachain-quorum-network --monitoring default --privacy true --orchestrate false --quorumKeyManager false
 ```
 
 The arguments ```--privacy``` and ```--clientType``` are required, the others contain defaults if left blank.
