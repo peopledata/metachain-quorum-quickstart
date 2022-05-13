@@ -1,14 +1,20 @@
 {
-  "name": "metachian-quorum-quickstart",
-  "version": "0.0.63",
+  "name": "metachain-quorum-quickstart",
+  "version": "1.1.0",
   "description": "A utility forked from ConsenSys/Quorum and customerizated for PeopleData Community!",
   "main": "build/index.js",
-  "repository": "git@github.com:peopledata/metachian-quorum-quickstart.git",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/peopledata/metachian-quorum-quickstart.git"
+  },
   "contributors": [
-    "Joshua Fernandes@ConsenSys,jerry zhang<jerry.zhang.bill@gmail.com"],
+    "Joshua Fernandes@ConsenSys,jerry zhang"
+  ],
   "license": "Apache-2.0",
   "private": false,
-  "bin": "./index.js",
+  "bin": {
+    "metachain-quorum-quickstart": "index.js"
+  },
   "scripts": {
     "build": "tsc",
     "lint": "eslint './src/**'",
@@ -48,5 +54,13 @@
     "open": "^8.3.0",
     "tmp": "^0.2.1",
     "yargs": "^17.2.1"
-  }
+  },
+  "bugs": {
+    "url": "https://github.com/peopledata/metachian-quorum-quickstart/issues"
+  },
+  "homepage": "https://github.com/peopledata/metachian-quorum-quickstart#readme",
+  "keywords": [
+    "metachain-quorum"
+  ],
+  "author": "jerry.zhang"
 }
