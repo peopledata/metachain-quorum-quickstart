@@ -1,4 +1,4 @@
-# Quorum Dev Quickstart
+# Metachain Quorum Quickstart
 
 
 ## Table of Contents
@@ -30,19 +30,8 @@ To run these tutorials, you must have the following installed:
 Create the docker-compose file and artifacts with 
 
 ```
-$> npx quorum-dev-quickstart
-              ___
-             / _ \   _   _    ___    _ __   _   _   _ __ ___
-            | | | | | | | |  / _ \  | '__| | | | | | '_ ' _ \
-            | |_| | | |_| | | (_) | | |    | |_| | | | | | | |
-             \__\_\  \__,_|  \___/  |_|     \__,_| |_| |_| |_|
-     
-        ____                          _
-       |  _ \    ___  __   __   ___  | |   ___    _ __     ___   _ __
-       | | | |  / _ \ \ \ / /  / _ \ | |  / _ \  | '_ \   / _ \ | '__|
-       | |_| | |  __/  \ V /  |  __/ | | | (_) | | |_) | |  __/ | |
-       |____/   \___|   \_/    \___| |_|  \___/  | .__/   \___| |_|
-                                                 |_|
+$> npx metachain-quorum-quickstart
+ 
        ___            _          _            _                    _
       / _ \   _   _  (_)   ___  | | __  ___  | |_    __ _   _ __  | |_
      | | | | | | | | | |  / __| | |/ / / __| | __|  / _' | | '__| | __|
@@ -50,8 +39,8 @@ $> npx quorum-dev-quickstart
       \__\_\  \__,_| |_|  \___| |_|\_\ |___/  \__|  \__,_| |_|     \__|
 
 
-Welcome to the Quorum Developer Quickstart utility. This tool can be used
-to rapidly generate local Quorum blockchain networks for development purposes
+Welcome to the Metachain Quorum Quickstart utility. This tool can be used
+to rapidly generate local Quorum blockchain networks for production/development purposes
 using tools like GoQuorum, Besu, and Codefi Orchestrate.
 
 To get started, be sure that you have both Docker and Docker Compose
@@ -100,15 +89,3 @@ Follow the README.md file of select artifact:
 2. [GoQuorum](./files/goquorum/README.md)
 3. [Codefi Orchestrate](./files/orchestrate/README.md)
 3. [Quorum Key Manager](./files/quorum-key-manager/README.md)
-
-## Troubleshooting
-
-### Besu only - `java.io.IOException: Permission denied` for volumes
-
-The `besu` containers use user `besu` mapped to user:group 1000. On your local machine, if your userid is not 1000, you will see this error. To fix this either run as user 1000 or map
-the container's user 1000 to your local user id so permissions will work like so in the compose file
-
-```
-image: some:img
-user: $(id -u):$(id -g)
-```
