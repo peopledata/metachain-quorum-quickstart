@@ -7,13 +7,13 @@ const _outputDirQuestion: QuestionTree = {
     name: "outputPath",
     prompt: "Where should we create the config files for this network? Please\n" +
  "choose either an empty directory, or a path to a new directory that does\n" +
-    "not yet exist. Default: ./quorum-test-network",
+    "not yet exist. Default: ./metachain-quorum-network",
     transformerValidator: (rawInput: string, answers: AnswerMap) => {
         // TODO: add some more checks to make sure that the path is valid
         if (rawInput) {
             answers.outputPath = rawInput;
         } else {
-            answers.outputPath = "./quorum-test-network";
+            answers.outputPath = "./metachain-quorum-network";
         }
 
         try {
@@ -117,18 +117,7 @@ const _quorumKeyManagerQuestion: QuestionTree = {
 };
 
 const bannerText = String.raw`
-              ___
-             / _ \   _   _    ___    _ __   _   _   _ __ ___
-            | | | | | | | |  / _ \  | '__| | | | | | '_ ' _ \
-            | |_| | | |_| | | (_) | | |    | |_| | | | | | | |
-             \__\_\  \__,_|  \___/  |_|     \__,_| |_| |_| |_|
 
-        ____                          _
-       |  _ \    ___  __   __   ___  | |   ___    _ __     ___   _ __
-       | | | |  / _ \ \ \ / /  / _ \ | |  / _ \  | '_ \   / _ \ | '__|
-       | |_| | |  __/  \ V /  |  __/ | | | (_) | | |_) | |  __/ | |
-       |____/   \___|   \_/    \___| |_|  \___/  | .__/   \___| |_|
-                                                 |_|
        ___            _          _            _                    _
       / _ \   _   _  (_)   ___  | | __  ___  | |_    __ _   _ __  | |_
      | | | | | | | | | |  / __| | |/ / / __| | __|  / _' | | '__| | __|
@@ -137,8 +126,8 @@ const bannerText = String.raw`
 `;
 
 const leadInText = `
-\nWelcome to the Quorum Developer Quickstart utility. This tool can be used
-to rapidly generate local Quorum blockchain networks for development purposes
+\nWelcome to the Metachain Quorum Quickstart utility. This tool can be used
+to rapidly generate local Quorum blockchain networks for development/production purposes
 using tools like GoQuorum, Besu, and Codefi Orchestrate.
 
 To get started, be sure that you have both Docker and Docker Compose
