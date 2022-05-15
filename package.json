@@ -1,6 +1,6 @@
 {
   "name": "metachain-quorum-quickstart",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "A utility forked from ConsenSys/Quorum and customerizated for PeopleData Community!",
   "main": "build/index.js",
   "repository": {
