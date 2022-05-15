@@ -36,10 +36,10 @@ if [ -f "docker-compose-deps.yml" ]; then
     docker-compose rm -sfv
 fi
 # pet shop dapp
-if [[ ! -z `docker ps -a | grep quorum-dev-quickstart_pet_shop` ]]; then
-  docker stop quorum-dev-quickstart_pet_shop
-  docker rm quorum-dev-quickstart_pet_shop
-  removeDockerImage quorum-dev-quickstart_pet_shop
+if [[ ! -z `docker ps -a | grep metachain-quorum-quickstart_pet_shop` ]]; then
+  docker stop metachain-quorum-quickstart_pet_shop
+  docker rm metachain-quorum-quickstart_pet_shop
+  removeDockerImage metachain-quorum-quickstart_pet_shop
 fi
 
 if grep -q 'kibana:' docker-compose.yml 2> /dev/null ; then

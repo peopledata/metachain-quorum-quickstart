@@ -126,13 +126,13 @@ services:
 
 networks:
   orchestrate:
-    name: orchestrate_quorum-dev-quickstart
+    name: orchestrate_metachain-quorum-quickstart
   deps:
     external:
-      name: deps_quorum-dev-quickstart
+      name: deps_metachain-quorum-quickstart
   qkm:
     external:
-      name: qkm_quorum-dev-quickstart
+      name: qkm_metachain-quorum-quickstart
   network:
     external:
-      name: quorum-dev-quickstart
+      name: metachain-quorum-quickstart

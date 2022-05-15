@@ -201,7 +201,7 @@ $> npm run compile
 Compiling your contracts...
 ===========================
 > Compiling ./smart-contracts/Counter.sol
-> Artifacts written to /home/jfernandes/workspace/quorum-dev-quickstart/quorum-test-network/orchestrate/build/contracts
+> Artifacts written to /home/jfernandes/workspace/metachain-quorum-quickstart/quorum-test-network/orchestrate/build/contracts
 > Compiled successfully using:
    - solc: 0.5.16+commit.9c3226ce.Emscripten.clang
 ```

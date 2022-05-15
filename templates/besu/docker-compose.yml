@@ -296,7 +296,7 @@ services:
       - ./config/nodes/validator1:/opt/besu/keys
       - ./logs/besu:/tmp/besu
     networks:
-      quorum-dev-quickstart:
+      metachain-quorum-quickstart:
         ipv4_address: 172.16.239.11
 
   validator2:
@@ -316,7 +316,7 @@ services:
     depends_on:
       - validator1
     networks:
-      quorum-dev-quickstart:
+      metachain-quorum-quickstart:
         ipv4_address: 172.16.239.12
 
   validator3:
@@ -336,7 +336,7 @@ services:
     depends_on:
       - validator1
     networks:
-      quorum-dev-quickstart:
+      metachain-quorum-quickstart:
         ipv4_address: 172.16.239.13
 
   validator4:
@@ -356,7 +356,7 @@ services:
     depends_on:
       - validator1
     networks:
-      quorum-dev-quickstart:
+      metachain-quorum-quickstart:
         ipv4_address: 172.16.239.14
 
   rpcnode:
@@ -374,7 +374,7 @@ services:
       - 8545:8545/tcp
       - 8546:8546/tcp
     networks:
-      quorum-dev-quickstart:
+      metachain-quorum-quickstart:
         ipv4_address: 172.16.239.15
 
   ethsignerProxy:
@@ -388,7 +388,7 @@ services:
     ports:
       - 18545:8545/tcp
     networks:
-      quorum-dev-quickstart:
+      metachain-quorum-quickstart:
         ipv4_address: 172.16.239.40
 
 {% if privacy %}
@@ -400,7 +400,7 @@ services:
       - ./config/nodes/member1:/config/keys
       - ./logs/tessera:/var/log/tessera/
     networks:
-      quorum-dev-quickstart:
+      metachain-quorum-quickstart:
         ipv4_address: 172.16.239.26
 
   member1besu:
@@ -432,7 +432,7 @@ services:
       - 20000:8545/tcp
       - 20001:8546/tcp
     networks:
-      quorum-dev-quickstart:
+      metachain-quorum-quickstart:
         ipv4_address: 172.16.239.16
 
   member2tessera:
@@ -443,7 +443,7 @@ services:
       - ./config/nodes/member2:/config/keys
       - ./logs/tessera:/var/log/tessera/
     networks:
-      quorum-dev-quickstart:
+      metachain-quorum-quickstart:
         ipv4_address: 172.16.239.27
 
   member2besu:
@@ -475,7 +475,7 @@ services:
       - 20002:8545/tcp
       - 20003:8546/tcp
     networks:
-      quorum-dev-quickstart:
+      metachain-quorum-quickstart:
         ipv4_address: 172.16.239.17
 
   member3tessera:
@@ -486,7 +486,7 @@ services:
       - ./config/nodes/member3:/config/keys
       - ./logs/tessera:/var/log/tessera/
     networks:
-      quorum-dev-quickstart:
+      metachain-quorum-quickstart:
         ipv4_address: 172.16.239.28
 
   member3besu:
@@ -518,7 +518,7 @@ services:
       - 20004:8545/tcp
       - 20005:8546/tcp
     networks:
-      quorum-dev-quickstart:
+      metachain-quorum-quickstart:
         ipv4_address: 172.16.239.18
 
 {% endif %}
@@ -532,7 +532,7 @@ services:
     ports:
       - 25000:25000/tcp
     networks:
-      quorum-dev-quickstart:
+      metachain-quorum-quickstart:
         ipv4_address: 172.16.239.31
 
 
@@ -540,13 +540,13 @@ services:
   blockscout:
     << : *blockscout-def
     networks:
-      quorum-dev-quickstart:
+      metachain-quorum-quickstart:
         ipv4_address: 172.16.239.51
 
   blockscoutpostgres:
     << : *blockscoutpostgres-def
     networks:
-      quorum-dev-quickstart:
+      metachain-quorum-quickstart:
         ipv4_address: 172.16.239.52
 
 {% endif %}
@@ -562,7 +562,7 @@ services:
     ports:
       - 9090:9090/tcp
     networks:
-      quorum-dev-quickstart:
+      metachain-quorum-quickstart:
         ipv4_address: 172.16.239.32
 
   grafana:
@@ -575,7 +575,7 @@ services:
     ports:
       - 3000:3000/tcp
     networks:
-      quorum-dev-quickstart:
+      metachain-quorum-quickstart:
         ipv4_address: 172.16.239.33
 {% endif %}
 
@@ -584,58 +584,58 @@ services:
   redis:
     << : *redis-def
     networks:
-      quorum-dev-quickstart:
+      metachain-quorum-quickstart:
         ipv4_address: 172.16.239.34
 
   elasticsearch:
     << : *elasticsearch-def
     networks:
-      quorum-dev-quickstart:
+      metachain-quorum-quickstart:
         ipv4_address: 172.16.239.35
 
   kibana:
     << : *kibana-def
     networks:
-      quorum-dev-quickstart:
+      metachain-quorum-quickstart:
         ipv4_address: 172.16.239.36
 
   logstash:
     << : *logstash-def
     networks:
-      quorum-dev-quickstart:
+      metachain-quorum-quickstart:
         ipv4_address: 172.16.239.37
 
   filebeat:
     << : *filebeat-def
     networks:
-      quorum-dev-quickstart:
+      metachain-quorum-quickstart:
         ipv4_address: 172.16.239.38
 
   metricbeat:
     << : *metricbeat-def
     networks:
-      quorum-dev-quickstart:
+      metachain-quorum-quickstart:
         ipv4_address: 172.16.239.39
 
 {% elif monitoring == "splunk" %}
   splunk:
     << : *splunk-def
     networks:
-      quorum-dev-quickstart:
+      metachain-quorum-quickstart:
         ipv4_address: 172.16.239.34
 
   otelcollector:
     << : *otelcollector-def
     << : *docker-logging
     networks:
-      quorum-dev-quickstart:
+      metachain-quorum-quickstart:
         ipv4_address: 172.16.239.35
 
   ethlogger:
     << : *ethlogger-def
     << : *docker-logging
     networks:
-      quorum-dev-quickstart:
+      metachain-quorum-quickstart:
         ipv4_address: 172.16.239.36
 
   cadvisor:
@@ -649,7 +649,7 @@ services:
     command:
       - --docker_only=true
     networks:
-      quorum-dev-quickstart:
+      metachain-quorum-quickstart:
         ipv4_address: 172.16.239.37
 
 {% endif %}
@@ -663,8 +663,8 @@ volumes:
   blockscoutpostgres:
 
 networks:
-  quorum-dev-quickstart:
-    name: quorum-dev-quickstart
+  metachain-quorum-quickstart:
+    name: metachain-quorum-quickstart
     driver: bridge
     ipam:
       config:

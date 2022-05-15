@@ -85,5 +85,5 @@ volumes:
 
 networks:
   deps:
-    name: deps_quorum-dev-quickstart
+    name: deps_metachain-quorum-quickstart
     driver: bridge

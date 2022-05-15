@@ -54,8 +54,8 @@ services:
 
 networks:
   qkm:
-    name: qkm_quorum-dev-quickstart
+    name: qkm_metachain-quorum-quickstart
     driver: bridge
   deps:
     external:
-      name: deps_quorum-dev-quickstart
+      name: deps_metachain-quorum-quickstart
